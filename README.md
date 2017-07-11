@@ -20,7 +20,17 @@
 
 # SUBIR A GITHUB
 
- - 'git remote add origin dirección-del-repositorio'
+ - 'git remote add origin  tu git@github.com:tuUser/tuRepo.git'
+
+# Cuando repo remoto este diferente del repo local :
+
+- Tienes que actualizar el local con un fetch 
+- Hacer git fetch origin 
+- fusionar el contenido descargado en origin/master con tu rama principal  master  (en local)
+- git merge origin/master (si no hay conflicto fue un fast forward exitoso)
+- De haber conflicto estas en un manual merge y no queda otra que ver que archivos estan 
+   en conflicto, arreglas esas lineas de código y grabar el commit.
+   
 
 ### Agreguemos este SUPERLOG
 ## git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
